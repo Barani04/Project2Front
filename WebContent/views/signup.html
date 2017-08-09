@@ -1,10 +1,11 @@
 <link href="css/style.css" rel="stylesheet">
 
-<div class="card col-8 col-md-auto hoverable animated lightSpeedIn">
+<div class="card col-8 col-md-auto hoverable animated bounceIn">
+{{error.message}}
 	<form class="form-horizontal">
 		<h3 class="card-header primary-color white-text">Register</h3>
 		<div class="card-body">
-			{{error.message}}
+			
 			<div class="row">
 				<div class="col-md-6">
 					<div class="md-form">
@@ -25,14 +26,14 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="md-form">
-						<input id="input_text" type="text" class="form-control"
-							ng-model="user.firstname"> <label for="input_text">FirstName</label>
+						<input id="defaultForm-fname" type="text" class="form-control"
+							ng-model="user.firstname"> <label for="defaultForm-fname">FirstName</label>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="md-form">
-						<input id="input_text" type="text" class="form-control"
-							ng-model="user.lastname"> <label for="input_text">LastName</label>
+						<input id="defaultForm-lname" type="text" class="form-control"
+							ng-model="user.lastname"> <label for="defaultForm-lname">LastName</label>
 					</div>
 				</div>
 			</div>

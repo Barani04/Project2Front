@@ -1,7 +1,7 @@
 /**
  * 
  */
-app.controller('UserController',function(UserService,$scope,$location){
+app.controller('UserController',function(UserService,$scope,$rootScope,$location,$cookieStore){
 	$scope.user={}
 	
 	$scope.registerUser=function(){
@@ -19,7 +19,9 @@ app.controller('UserController',function(UserService,$scope,$location){
 	$scope.validateUser=function(){
 		UserService.validateUser($scope.user).then(function(response) {
 			console.log(response.data)
-			$location.pat('/home')
+			$rootScope.currentUser=response.data
+			$cookieStore.put("currentUser",response.data)
+			$location.path('/home')
 		},function(response){
 			$scope.error = response.data
 			console.log(response.status)
@@ -27,13 +29,15 @@ app.controller('UserController',function(UserService,$scope,$location){
 		})
 	}
 	
-	$scope.logout=function(){
-		UserService.logout().then(function() {
-			$scope.message='Logged Out Successfully'
-			$location.path('/home')
-		},function(){
-			console.log(response.status)
-			console.log(response.data)
+	$rootScope.logout=function(){
+		UserService.logout().then(function(response) {
+			$rootScope.message='Logged Out Successfully'
+				delete $rootScope.currentUser
+				$cookieStore.remove("currentUser")
+				$location.path('/login')
+		},function(response){
+			$scope.error=response.data
+			$location.path('/login')
 		})
 	}
 })

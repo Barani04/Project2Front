@@ -110,6 +110,13 @@
 .content{
 	margin-top: 55px;
 }
+.wrapper,header{
+	height: 50px !important;
+}
+.wrapper ul li{
+	display: inline;
+	text-decoration: none;
+}
 @media (max-width:767px) {
 
 #wrapper {
