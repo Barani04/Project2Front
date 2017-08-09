@@ -1,0 +1,25 @@
+<link href="css/style.css" rel="stylesheet">
+{{message}}
+{{error.message}}
+<div class="card col-8 col-md-auto hoverable animated bounceIn">
+	<form class="form-horizontal">
+		<h3 class="card-header primary-color white-text">SignIn</h3>
+		<div class="card-body">
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i> <input id="input_text"
+					type="text" class="form-control" ng-model="user.username"> <label
+					for="input_text">UserName</label>
+			</div>
+
+			<div class="md-form">
+				<i class="fa fa-lock prefix grey-text"></i> <input type="password"
+					id="defaultForm-pass" class="form-control" ng-model="user.password"> <label
+					for="defaultForm-pass">Your password</label>
+			</div>
+
+			<div class="text-center">
+				<button class="btn btn-default" ng-click="validateUser()">Login</button>
+			</div>
+		</div>
+	</form>
+</div>
