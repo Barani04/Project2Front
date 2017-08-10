@@ -20,6 +20,14 @@ app.config(function($routeProvider) {
 		templateUrl:'views/login.html',
 		controller:'UserController'
 	})
+	.when('/editprofile',{
+		templateUrl:'views/updateprofile.html',
+		controller:'UserController'
+	})
+	.otherwise({
+		templateUrl:'views/login.html',
+		controller:'UserController'
+	})
 	
 })
 app.run(function($rootScope,$cookieStore) {

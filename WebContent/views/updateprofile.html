@@ -2,22 +2,21 @@
 <div style="margin-top: 55px;color: red;" class="animated fadeIn">{{error.message}}</div>
 <div class="card hoverable animated bounceIn">
 	<form class="form-horizontal">
-		<h3 class="card-header primary-color white-text">Register</h3>
+		<h3 class="card-header cyan lighten-3 white-text">Update Profile</h3>
 		<div class="card-body">
-			
 			<div class="row">
 				<div class="col-md-6">
 					<div class="md-form">
-						<i class="fa fa-user prefix grey-text"></i> <input id="input_text"
-							type="text" class="form-control" ng-model="user.username">
-						<label for="input_text">UserName</label>
+						<i class="fa fa-user prefix grey-text active"></i> <input id="input_text"
+							type="text" class="form-control active" ng-model="user.username" disabled>
+						<label for="input_text" class="disabled active">UserName</label>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="md-form">
-						<i class="fa fa-lock prefix grey-text"></i> <input type="password"
-							id="defaultForm-pass" class="form-control"
-							ng-model="user.password"> <label for="defaultForm-pass">Password</label>
+						<i class="fa fa-lock prefix grey-text active"></i> <input type="password"
+							id="defaultForm-pass" class="form-control active"
+							ng-model="user.password"> <label for="defaultForm-pass" class="active">Password</label>
 					</div>
 				</div>
 			</div>
@@ -25,28 +24,28 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="md-form">
-						<input id="defaultForm-fname" type="text" class="form-control"
-							ng-model="user.firstname"> <label for="defaultForm-fname">FirstName</label>
+						<input id="defaultForm-fname" type="text" class="form-control active"
+							ng-model="user.firstname"> <label for="defaultForm-fname" class="active">FirstName</label>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="md-form">
-						<input id="defaultForm-lname" type="text" class="form-control"
-							ng-model="user.lastname"> <label for="defaultForm-lname">LastName</label>
+						<input id="defaultForm-lname" type="text" class="form-control active"
+							ng-model="user.lastname"> <label for="defaultForm-lname" class="active">LastName</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="md-form">
-				<i class="fa fa-envelope prefix grey-text"></i> <input type="email"
+				<i class="fa fa-envelope prefix grey-text active"></i> <input type="email"
 					id="defaultForm-email" class="form-control" ng-model="user.email">
-				<label for="defaultForm-email">Email Address</label>
+				<label for="defaultForm-email" class="active">Email Address</label>
 			</div>
 
 			<div class="md-form">
-				<i class="fa fa-phone prefix grey-text"></i> <input type="text"
-					id="defaultForm-phone" class="form-control"
-					ng-model="user.phonenumber"> <label for="defaultForm-phone">Phone
+				<i class="fa fa-phone prefix grey-text active"></i> <input type="text"
+					id="defaultForm-phone" class="form-control active"
+					ng-model="user.phonenumber"> <label for="defaultForm-phone" class="active">Phone
 					Number</label>
 			</div>
 
@@ -70,8 +69,7 @@
 			</div>
 
 			<div class="text-center">
-				<button class="btn btn-default" ng-click="registerUser()">Sign
-					Up</button>
+				<button class="btn btn-default" ng-click="updateUser()">Update</button>
 			</div>
 		</div>
 	</form>
