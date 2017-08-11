@@ -30,7 +30,19 @@ app.config(function($routeProvider) {
 	})
 	
 })
-app.run(function($rootScope,$cookieStore) {
+app.run(function($rootScope,$cookieStore,UserService,$location) {
 	if($rootScope.currentUser==undefined)
 		$rootScope.currentUser = $cookieStore.get("currentUser")
+		
+		$rootScope.logout=function(){
+		UserService.logout().then(function(response) {
+			$rootScope.message='Logged Out Successfully'
+				delete $rootScope.currentUser
+				$cookieStore.remove("currentUser")
+				$location.path('/login')
+		},function(response){
+			$scope.error=response.data
+			$location.path('/login')
+		})
+	}
 })

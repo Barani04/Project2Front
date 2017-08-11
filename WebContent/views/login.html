@@ -1,6 +1,10 @@
 <link href="css/style.css" rel="stylesheet">
-<div style="margin-top: 55px; color: red;">{{message}}</div>
-<div style="margin-top: 55px;color: red;">{{error.message}}</div>
+<div ng-if="message !=null" class="text-center msg" id="alert_box">
+<div  class="alert alert-success rounded">{{message}}</div>
+</div>
+<div ng-if="error.message !=null" class="text-center" id="alert_box">
+	<div class="alert alert-danger alert-dismissable rounded">{{error.message}}</div>
+</div>
 <div class="card hoverable animated bounceIn">
 
 	<form class="form-horizontal">
@@ -24,3 +28,11 @@
 		</div>
 	</form>
 </div>
+<script type="text/javascript">
+	 var $alert = $('.alert');
+	if ($alert.length) {
+		setTimeout(function() {
+			$alert.fadeOut('slow');
+		}, 2000)
+	}
+</script>

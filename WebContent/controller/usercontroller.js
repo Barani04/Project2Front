@@ -37,17 +37,7 @@ app.controller('UserController',function(UserService,$scope,$rootScope,$location
 		})
 	}
 	
-	$rootScope.logout=function(){
-		UserService.logout().then(function(response) {
-			$rootScope.message='Logged Out Successfully'
-				delete $rootScope.currentUser
-				$cookieStore.remove("currentUser")
-				$location.path('/login')
-		},function(response){
-			$scope.error=response.data
-			$location.path('/login')
-		})
-	}
+	
 	
 	$scope.updateUser=function(){
 		UserService.updateUser($scope.user).then(function(response){
