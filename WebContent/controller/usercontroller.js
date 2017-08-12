@@ -45,6 +45,7 @@ app.controller('UserController',function(UserService,$scope,$rootScope,$location
 			$location.path('/home')
 		},function(response){
 			console.log(response.data)
+			$scope.error=response.data
 			if(response.status==401)
 				$location.path('/login')
 			$location.path('/editprofile')

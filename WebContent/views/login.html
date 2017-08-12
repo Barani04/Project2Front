@@ -1,9 +1,9 @@
 <link href="css/style.css" rel="stylesheet">
-<div ng-if="message !=null" class="text-center msg" id="alert_box">
-<div  class="alert alert-success rounded">{{message}}</div>
+<div ng-if="message !=null" class="text-center alert alert-success alert-dismissable rounded" id="alert_box" >
+		<b>{{message}}</b>
 </div>
-<div ng-if="error.message !=null" class="text-center" id="alert_box">
-	<div class="alert alert-danger alert-dismissable rounded">{{error.message}}</div>
+<div ng-if="error.message !=null" class="text-center alert alert-danger alert-dismissable rounded" id="alert_box">
+	<b>{{error.message}}</b>
 </div>
 <div class="card hoverable animated bounceIn">
 
@@ -31,8 +31,11 @@
 <script type="text/javascript">
 	 var $alert = $('.alert');
 	if ($alert.length) {
-		setTimeout(function() {
+		function alert() {
 			$alert.fadeOut('slow');
-		}, 2000)
+		}
+		setTimeout(alert, 2000) 
 	}
+		 
+	
 </script>

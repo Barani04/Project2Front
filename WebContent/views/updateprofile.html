@@ -1,5 +1,7 @@
 <link href="css/style.css" rel="stylesheet">
-<div style="margin-top: 55px;color: red;" class="animated fadeIn">{{error.message}}</div>
+<div ng-if="error.message !=null" class="text-center">
+	<div id="alert_box" class="alert alert-danger alert-dismissable rounded">{{error.message}}</div>
+</div>
 <div class="card hoverable animated bounceIn">
 	<form class="form-horizontal">
 		<h3 class="card-header cyan lighten-3 white-text">Update Profile</h3>

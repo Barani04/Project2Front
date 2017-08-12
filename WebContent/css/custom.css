@@ -2,11 +2,15 @@
 
 .content{
 	margin-top: 55px;
+	
 }
 .wrapper{
 	height: 50px;
+	opacity:0.6;
+	
 }
 .wrapper a{
 	padding-right:15px;
 	color: #2962ff !important;
+	
 }
