@@ -24,6 +24,11 @@ app.config(function($routeProvider) {
 		templateUrl:'views/updateprofile.html',
 		controller:'UserController'
 	})
+	.when('/jobform',{
+		templateUrl:'views/jobform.html',
+		controller:'required'
+	
+	})
 	.otherwise({
 		templateUrl:'views/login.html',
 		controller:'UserController'

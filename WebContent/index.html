@@ -4,9 +4,8 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-<link href="mdb/css/bootstrap.min.css" rel="stylesheet">
-<link href="mdb/css/mdb.min.css" rel="stylesheet">
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="materialize/css/materialize.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
 <title>EDUSPOT</title>
@@ -40,6 +39,8 @@ html, body {
 					<li class="nav-item"><a class="nav-link " href="#!home">Home</a>
 					</li>
 					<li class="nav-item"><a class="nav-link " href="#!editprofile" ng-show="currentUser.firstname">Edit Profile</a>
+					</li>
+					<li class="nav-item"><a class="nav-link " href="#!jobform" ng-show="currentUser.firstname">Jobform</a>
 					</li>
 					<!-- Dropdown
             <li class="nav-item dropdown">
@@ -76,10 +77,10 @@ html, body {
 	<script src="js/angular-route.js"></script>
 	<script src="js/angular-cookies.min.js"></script>
 	<script src="controller/usercontroller.js"></script>
+	<script src="controller/jobcontroller.js"></script>
 	<script src="service/userservice.js"></script>
-	<script type="text/javascript" src="mdb/js/popper.min.js"></script>
-	<script src="mdb/js/jquery-3.2.1.min.js"></script>
-	<script src="mdb/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+	<script src="materialize/js/jquery-3.2.1.min.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	
 </body>
 </html>

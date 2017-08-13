@@ -5,37 +5,30 @@
 <div ng-if="error.message !=null" class="text-center alert alert-danger alert-dismissable rounded" id="alert_box">
 	<b>{{error.message}}</b>
 </div>
-<div class="card hoverable animated bounceIn">
-
+<div class="card hoverable">
 	<form class="form-horizontal">
-		<h3 class="card-header primary-color white-text">SignIn</h3>
-		<div class="card-body">
-			<div class="md-form">
-				<i class="fa fa-user prefix grey-text"></i> <input id="input_text"
-					type="text" class="form-control" ng-model="user.username"> <label
-					for="input_text">UserName</label>
+			<div class="card-header">
+				<div class="center-align white-text teal lighten-2" style="font-weight:400; font-size:30px;">Login</div>
 			</div>
-
-			<div class="md-form">
-				<i class="fa fa-lock prefix grey-text"></i> <input type="password"
-					id="defaultForm-pass" class="form-control" ng-model="user.password"> <label
-					for="defaultForm-pass">Your password</label>
+			<div class="card-body">
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix grey-text text-lighten-1">account_circle</i>
+						<input id="username" type="text" class="validate" ng-model="user.username">
+						<label for="username">User Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix grey-text text-lighten-1">lock_outline</i>
+						<input id="password" type="password" class="validate"  ng-model="user.password">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="card-action center-align">
+			 		<a class="btn waves-effect waves-light" type="submit"  ng-click="validateUser()">LogIn
+  					</a>
+				</div>
 			</div>
-
-			<div class="text-center">
-				<button class="btn btn-default" ng-click="validateUser()">Login</button>
-			</div>
-		</div>
-	</form>
+		</form>
 </div>
-<script type="text/javascript">
-	 var $alert = $('.alert');
-	if ($alert.length) {
-		function alert() {
-			$alert.fadeOut('slow');
-		}
-		setTimeout(alert, 2000) 
-	}
-		 
-	
-</script>
