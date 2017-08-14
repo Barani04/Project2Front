@@ -11,6 +11,13 @@
 }
 .wrapper a{
 	padding-right:15px;
-	color: #2962ff !important;
-	
+
+}
+nav{
+	height:50px;
+	line-height: 50px;
+}
+
+nav .brand-logo{
+	font-size: 1.7rem;
 }
