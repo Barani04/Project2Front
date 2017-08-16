@@ -34,7 +34,7 @@ app.config(function($routeProvider) {
 	})
 	
 })
-app.run(function($rootScope,$cookieStore,UserService,$location) {
+app.run(function(UserService,$rootScope,$cookieStore,$location) {
 	if($rootScope.currentUser==undefined)
 		$rootScope.currentUser = $cookieStore.get("currentUser")
 		
