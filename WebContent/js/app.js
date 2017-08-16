@@ -29,15 +29,22 @@ app.config(function($routeProvider) {
 		controller:'JobController'
 	
 	})
+	
+	.when('/getalljobs',{
+		templateUrl:'views/jobspage.html',
+		controller:'JobController'
+	
+	})
+	
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
 	
 })
 app.run(function(UserService,$rootScope,$cookieStore,$location) {
-	if($rootScope.currentUser==undefined)
+	if($rootScope.currentUser==undefined){
 		$rootScope.currentUser = $cookieStore.get("currentUser")
-		
+	}
 		$rootScope.logout=function(){
 		UserService.logout().then(function(response) {
 			$rootScope.message='Logged Out Successfully'

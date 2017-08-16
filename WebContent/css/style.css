@@ -8,12 +8,18 @@
 }
 
 #alert_box{
-	transition: all linear 1s;
+	border:1px solid red;
+	border-radius:8px;
+	font-weight:200;
+	color:#ff1a1a;
+	background-color:#ffcccc;
 	margin-top: 55px;
 	margin-left:auto;
 	margin-right:auto;
 	width:600px;
 	text-align: center;
-	opacity:1;
+	animation-timing-function: linear;
+	animation-delay: 4s;
 }
-   
+
+

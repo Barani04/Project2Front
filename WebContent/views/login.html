@@ -1,8 +1,8 @@
 <link href="css/style.css" rel="stylesheet">
-<div ng-if="message !=null" class="text-center alert alert-success alert-dismissable rounded" id="alert_box" >
-		<b>{{message}}</b>
+<div ng-if="message !=null" class="text-center animated fadeOut" id="alert_box" >
+		<p>{{message}}</p>
 </div>
-<div ng-if="error.message !=null" class="text-center alert alert-danger alert-dismissable rounded" id="alert_box">
+<div ng-if="error.message !=null" class="text-center" id="alert_box">
 	<b>{{error.message}}</b>
 </div>
 <div class="card hoverable">

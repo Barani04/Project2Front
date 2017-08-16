@@ -6,6 +6,7 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="materialize/css/materialize.min.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
 <title>EDUSPOT</title>
@@ -36,6 +37,8 @@ html, body {
 		  			<li><a class="nav-link " href="#!editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
 		  			<li><a class="nav-link " href="#!jobform" ng-show="currentUser.role=='ADMIN'">Jobform</a>
 					</li>
+					<li><a class="nav-link " href="#!getalljobs" ng-show="currentUser.firstname">All Jobs</a>
+					</li>
 					<li class="right"><a class="nav-link " href="#!signup"
 						ng-hide="currentUser.firstname">SignUp</a></li>
 		  			<li class="right"><a class="nav-link " href="#!login"
@@ -52,6 +55,8 @@ html, body {
 		  			<li><a href="#!home">Home</a></li>
 		  			<li><a href="#!editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
 					<li ><a href="#!jobform" ng-show="currentUser.role=='ADMIN'">Jobform</a>
+					</li>
+					<li><a href="#!getalljobs" ng-show="currentUser.firstname">All Jobs</a>
 					</li>
 		  			<li><a href="#!signup" ng-hide="currentUser.firstname">SignUp</a></li>
 		  			<li><a href="#!login" ng-hide="currentUser.firstname">LogIn</a></li>

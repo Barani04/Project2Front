@@ -7,10 +7,24 @@ app.controller("JobController", function(JobService,$scope,$location) {
 			
 					$scope.exp=[1,2,3,4,5,6,7,8,9,10]
 					
+					$scope.showJobDetails=false;
+			
+				function getAllJobs(){
+					$scope.showJobDetails=false;
+						JobService.getAllJobs().then(function(response){
+							$scope.jobs=response.data;
+						},function(response){
+							$location.path("/login")
+						})
+					}	
+					
+					
+					
 					
 				$scope.saveJob=function(){
 				JobService.saveJob($scope.job).then(function(response){
 					console.log(response.data)
+					alert("Job Saved Successfully")
 					console.log(response.status)
 					$location.path('/getalljobs')
 					
@@ -28,5 +42,17 @@ app.controller("JobController", function(JobService,$scope,$location) {
 						
 				})
 			}
+			
+			$scope.getJobDetails=function(id){
+				$scope.showJobDetails=true
+				JobService.getJobDetails(id).then(function(response){
+					$scope.job = response.data
+				},function(response){
+					console.log(response.data)
+					$location.path('/login')
+				})
+			}
+					
+getAllJobs()
 	})
 		
