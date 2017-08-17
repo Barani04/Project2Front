@@ -1,5 +1,5 @@
 <div>
-Search : <input style="width:300px;" class="input-field col s8 offset-s2" ng-model="job.skillRequired">
+Search : <input style="width:300px;"ng-model="simpleText">
 <table class="bordered striped">
 <thead>
 <tr>
@@ -7,8 +7,8 @@ Search : <input style="width:300px;" class="input-field col s8 offset-s2" ng-mod
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="job in jobs | filter:job.skillRequired">
-<td><a href="" ng-click="getJobDetails(job.id)">{{job.jobTitle}}</a></td>
+<tr ng-repeat="job in jobs | filter:simpleText">
+<td><a href="" ng-click="getJobDetails(job.jid)">{{job.jobTitle}}</a></td>
 <td>{{job.postedOn | date : 'dd/MM/yyyy'}}</td>
 <td>{{job.skillRequired}}</td>
 </tr>

@@ -10,7 +10,6 @@ app.controller("JobController", function(JobService,$scope,$location) {
 					$scope.showJobDetails=false;
 			
 				function getAllJobs(){
-					$scope.showJobDetails=false;
 						JobService.getAllJobs().then(function(response){
 							$scope.jobs=response.data;
 						},function(response){
@@ -43,9 +42,9 @@ app.controller("JobController", function(JobService,$scope,$location) {
 				})
 			}
 			
-			$scope.getJobDetails=function(id){
-				$scope.showJobDetails=true
-				JobService.getJobDetails(id).then(function(response){
+			$scope.getJobDetails=function(jid){
+				$scope.showJobDetails=true;
+				JobService.getJobDetails(jid).then(function(response){
 					$scope.job = response.data
 				},function(response){
 					console.log(response.data)
