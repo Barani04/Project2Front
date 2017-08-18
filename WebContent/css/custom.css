@@ -1,7 +1,7 @@
 /*my css*/
 
 .content{
-	margin-top: 55px;
+	margin-top: 70px;
 	
 }
 .wrapper{
@@ -20,4 +20,15 @@ nav{
 
 nav .brand-logo{
 	font-size: 1.7rem;
+}
+#dropdown{
+			margin-top:55px !important;
+			border-radius: 5px;
+			position:absolute !important;
+			z-index: 10  !important;
+			
+		}
+#dropdown li{
+	height:30px !important;
+	line-height: 30px !important;
 }
